@@ -1,0 +1,9 @@
+mixin danger(image, header, ft, st, className='')
+  .danger
+    img.danger__img(src='./../../images/dangers/' + image alt='danger')
+    h5.danger__header=header
+    .danger__desc-wrap
+      p(class='danger__first-desc ' + className) Причина:
+        span(style='color: #969696')=' ' + ft
+      p.danger__second-desc Стоимость ремонта:
+        span(style='color: #969696')=' ' + st

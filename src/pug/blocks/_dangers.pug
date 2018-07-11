@@ -1,0 +1,36 @@
+include ../mixins/_danger
+include ../mixins/_button
+.dangers
+  .wrapper
+    .benefits__heading-wrap
+      h2.header__heading <span class='header__heading-style'>Как не правильный <br /> монтаж</span> может <br /> отразится на Вашем <br /> кошельке:
+      p.header__description.dangers__description_mar Оборудование подбирается <span class='dangers__description_bcol'>ТОЛЬКО исходя из
+        <br /> технических особенностей помещений </span> (квадратура,
+        <br /> толщина стен, высота окон, высота потолка, материалы  <br /> отделки помещения и здания и т.д). <br />
+        <br /> Не правильный подбор оборудования <span class='dangers__description_bcol'>приводит <br /> к увеличению ежемесячных платежей, износу
+        <br /> отопительной системы, не равномерному <br /> распределению тепла. </span>
+    .dangers__problems
+      +danger('1.jpg', 'Неравномерное распределение тепла:', 'Подобран не правильный диаметр трубы, произведен не правильный расчет', '60 000 рублей', '')
+      +danger('2.jpg', 'То греет, то не греет:', 'Завоздушивание системы из-за ошибок монтажа', '76 000 рублей', 'danger__first-desc_fix')
+      +danger('3.jpg', 'Зимой холодно - ЛЕТОМ жарко', ' Гидрострелка не соответствует мощности котла', '180 000 рублей', '')
+      +danger('4.jpg', 'Котел лопнул после года работы', 'Плохо смонтирован один из узлов гидравлической развязки. Случай не гарантийный', '60 000 рублей', '')
+    form.dangers__form#form(action='' method='POST' )
+      p.dangers__form-desc Хотите выбрать оборудование <span class='dangers__form-desc_col'>правильно для Вашего здания/помещения? </span>
+        <br /> Уже выбрали оборудование, но сомневаетесь в правильности принятия решения?
+        <br /> <span class='dangers__form-desc_col'>Хотите сэкономить,</span> сделав правильный подбор оборудования и комплектующих?
+      p.dangers__form-exhortation Заполните форму и Вы получите бесплатную консультацию. <br /> Отправка формы ни к чему не обязывает.
+      .dangers__form-data
+        .group
+          input.group__input(type='text' required)
+          span.group__span
+          span.group__span2
+          label.group__label Ведите Ваше имя
+        .group
+          input.group__input(type='text' required)
+          span.group__span
+          span.group__span2
+          label.group__label Введите Ваш телефон
+        .dangers__btn-wrap
+          +button('Получить бесплатную консультацию', 'button button_fix-pad3 button_fix-fns1', 'button-wrap')
+          .confidentiality Согласен <a href='#' class='confidentiality__link'>с политикой конфиденциальности </span>
+
