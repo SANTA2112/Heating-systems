@@ -1,0 +1,111 @@
+.servises
+  background url('./../../images/pattern.png') center center/contain #f5f5d7
+  padding 10.2rem 0 10rem
+  &__description_mar
+    margin-left 10.8rem
+  &__tabs
+    margin-top 8rem
+  &__tabs-navigation
+    display flex
+    position relative
+    &:after
+      content ''
+      height 8px
+      background-color ligc
+      opacity 0.36
+      margin-top 1.8rem
+      width calc( 100% + 4.8rem)
+      position absolute
+      bottom 0
+      left 0
+  &__items-wrap
+    margin-top 4.9rem
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+
+
+.servise
+  &__header
+    color #000000
+    font-size 2rem
+    font-weight 700
+    line-height 2.6rem
+    text-transform: uppercase
+    max-width 23.4rem
+  &__items
+    margin-top 2.7rem
+    max-width 27.2rem
+  &__item
+    color ligc
+    list-style none
+    font-size 1.8rem
+    &:before
+      content '●'
+      color #e31e25
+      font-family "Arial"
+      font-weight 700
+      line-height 26px
+      display inline-block
+      margin-right 0.4rem
+  &__price
+    margin-top 2.8rem
+    font-size 2rem
+    &-span
+      font-weight 700
+  &__link
+    color #239cc8
+    font-size 18px
+    margin-top 2.9rem
+    border none
+    background transparent
+    border-bottom  1px solid #239cc8
+
+.tab_btn
+  display flex
+  flex-direction column
+  align-items center
+  position relative
+  &_mr-l
+    margin-left 8.9rem
+  &_mr-l2
+    margin-left 20.9rem
+  &_mr-l3
+    margin-left 21.3rem
+  &_mr-l4
+    margin-left 16.8rem
+  &-icon
+    fill ligc
+  &-name
+    margin 2rem 0 1.8rem
+    font-size 2.4rem
+    text-transform uppercase
+  & .active
+    color #e31e25
+
+
+.tab_btn.active:before {
+  content ''
+  position absolute
+  bottom 0
+  left 0
+  width 273px
+  height 8px
+  background-color #e31e25
+}
+.tab_btn.active1:before {
+  content ''
+  margin-left -8.9rem
+}
+.tab_btn.active2:before {
+  content ''
+  margin-left -8.9rem
+}
+.tab_btn.active3:before {
+  content ''
+  margin-left -8.9rem
+}
+.tab_btn.active4:before {
+  content ''
+  margin-left -4rem
+}

@@ -1,0 +1,9 @@
+mixin servise(header, price, link, ...items)
+  .servise
+    h4.servise__header=header
+    ul.servise__items
+      each item in items
+        li.servise__item=item
+    p.servise__price Цена:
+      span.servise__price-span=price
+    button.servise__link=link
