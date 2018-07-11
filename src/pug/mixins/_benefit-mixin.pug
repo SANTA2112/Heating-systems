@@ -1,0 +1,6 @@
+mixin benefit(className, header, desc, fixwidth = '', fixfnsz='')
+  .benefit
+    .benefit-wrap
+      div(class=className)
+      div(class='benefit__heading ' + fixfnsz)=header
+    div(class='benefit__description ' + fixwidth)=desc

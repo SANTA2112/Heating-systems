@@ -1,0 +1,23 @@
+include ../mixins/_benefit-mixin
+include ../mixins/_button
+.wrapper
+  .benefits
+    .benefits__heading-wrap
+      h2.header__heading <span class='header__heading-style'>С НАМИ ВЫГОДНО РАБОТАТЬ</span> <br />ПОТОМУ, ЧТО:
+      p.header__description.benefits__description_mar 12 причин обратиться именно к нам <br />и получить максимальную выгоду
+    .benefit-container
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon1','Получите гарантию на 24 месяца:', 'Предоставляем гарантию на монтаж 2 года: Гарантируем бесперебойную работу оборудования в течение 2-х лет')
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon2','Фиксируем цены и сроки в договоре:', 'В договоре будут прописаны: сроки установки систем, стоимость услуг, гарантийные обязательства, детальная смета на виды работ, штрафы за не выполненные обязательства')
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon3','Есть все необходимые сертификаты и лицензии', 'Мы имеем все необходимые сертификаты и лицензии необходимы для работы. Специалисты имееют профессиональное образование и стаж работы от 5 лет.', '', 'benefit__heading_fix-fnsz')
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon4','Выезд, замеры и расчет сметы бесплатно:', 'Бесплатный выезд, замер и расчет сметы, экономия до 5000 руб')
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon5','Получите 3 варианта сметы бесплатно', 'Бесплатно подготовим 3 варианта сметы под ваш бюджет')
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon6','Подберем лучшее оборудование', 'Подберем под Ваш бюджет и закупим оборудование по оптовым ценам, экономия до 48%')
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon7','Демонтируем и утилизируем', 'При необходимости демонтируем и утилизируем старое оборудование')
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon8','Работаем без предоплаты', 'Оплату нашей работы Вы производите только после её выполнения и приёмки')
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon9','Работаем без посредников', 'Работая с нами напрямую Вы экономите дополнительно до 27% денежных средств.', 'benefit__description_fix-width')
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon10','Сами доставим оборудование', 'При необходимости доставку оборудования возьмем на себя')
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon11','Поставим удаленное управление', 'Дополнительно мы ставим управление отоплением по WiFi и по телефону')
+      +benefit('benefit__icon benefit__icon_icon-before benefit__icon_icon-before_icon12','Чистим и убираем за собой', 'После работ мы обязательно уберем и очистим за собой', 'benefit__description_fix-width2')
+    .benefits__button-wrap
+      +button('Рассчитать точную стоимость монтажа', 'button', 'button-wrap')
+
