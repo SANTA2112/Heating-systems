@@ -23,7 +23,10 @@
     display flex
     justify-content space-between
     flex-wrap wrap
-
+  &__type-of-servises
+    display none
+    &.active
+        display block
 
 .servise
   &__header
@@ -66,6 +69,15 @@
   flex-direction column
   align-items center
   position relative
+  &.active
+    &:before
+      content ''
+      position absolute
+      bottom 0
+      left 0
+      width 273px
+      height 8px
+      background-color #e31e25
   &_mr-l
     margin-left 8.9rem
   &_mr-l2
@@ -84,15 +96,6 @@
     color #e31e25
 
 
-.tab_btn.active:before {
-  content ''
-  position absolute
-  bottom 0
-  left 0
-  width 273px
-  height 8px
-  background-color #e31e25
-}
 .tab_btn.active1:before {
   content ''
   margin-left -8.9rem
