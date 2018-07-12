@@ -22,13 +22,23 @@ tabs.forEach(tab => tab.onclick = activeTab.bind('', tabs.indexOf(tab)))
 // slider-images
 
 const sliderImages = document.querySelectorAll('.sliderContent__small-img');
-const sliderMainImage = document.querySelector('.sliderContent__big-img');
+const sliderMainImage1 = [...document.querySelectorAll('.sliderContent__big-img')];
+const container = document.querySelector('.works__content');
 
-sliderImages.forEach(el => el.onclick = e => {
-  e.target.classList.add('active');
-  sliderMainImage.setAttribute("src", e.target.getAttribute('src'))
+container.addEventListener('click', e => {
+  sliderMainImage1.forEach((el, i) => {
+    if(e.target.classList.contains('sliderContent__small-img')) {
+      sliderMainImage1[i].setAttribute("src", e.target.getAttribute('src'));
+    }
+    (e.target.getAttribute('src') === sliderMainImage1[i].getAttribute('src')) && e.target.classList.add('active');
+  })
+})
+
+setInterval(() => sliderImages.forEach((el, i) => el.getAttribute('src') !== sliderMainImage1[0].getAttribute('src') && el.classList.remove('active')), 200)
+
+var swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
 });
-
-sliderImages.forEach(el => el.onblur = e =>  e.target.classList.remove('active'));
-
-var swiper = new Swiper('.swiper-container', {});

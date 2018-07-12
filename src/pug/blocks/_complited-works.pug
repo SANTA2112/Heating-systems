@@ -1,29 +1,61 @@
 include ../mixins/_slider-icons
+include ../mixins/_button
 .works
   .wrapper
     .works__heading-wrap
       h2.header__heading <span class='header__heading-style'>Выполненные<br /> работы</span>
     .works__content
-      .sliderContent
-        .sliderContent__images
-          img(src='./../../images/slider_img/image-1.jpeg').sliderContent__big-img
-          .sliderContent__small-img-container
-            img(src='./../../images/slider_img/image-1.jpeg' tabindex="1").sliderContent__small-img
-            img(src='./../../images/slider_img/image-3.jpeg' tabindex="2").sliderContent__small-img
-            img(src='./../../images/slider_img/image-4.jpeg' tabindex="3").sliderContent__small-img
-            img(src='./../../images/slider_img/image-5.jpeg' tabindex="4").sliderContent__small-img
-            img(src='./../../images/slider_img/image.jpeg' tabindex="5").sliderContent__small-img
-            img(src='./../../images/slider_img/image-2.jpeg' tabindex="6").sliderContent__small-img
-        .sliderContent__icons
-          +icon('1.png', 'Площадь', '110 кв.м')
-          +icon('2.png', 'Материал', '175 000 ₽')
-          +icon('3.png', 'Монтаж', '95 000 ₽')
-      .works__content__desc
-        p.works__content__room-name Квартира на улице Каюма Насыри, 44 <br />(г. Казань)
-        p.works__content__room-desc <span class ='works__content__room-desc_num'>1.</span> Сделали переход от центрального отопления  к индивидуальному
-          <br /> <span class ='works__content__room-desc_num'>2.</span> Закатали теплые полы по всей квартире
-          <br /> <span class ='works__content__room-desc_num'>3.</span> В квартире заказчика был установлен ламинат (максимально
-          <br /> допустимая температура для ламината 28 градусов) и плитка
-          <br /> максимально допустимая температура 35 градусов) было принято
-          <br /> решение установить коллекторы и настроить им разрешенную
-          <br /> температуру.
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            .sliderContent
+              .sliderContent__images
+                img(src='./../../images/slider_img/image-1.jpeg' tabindex='1').sliderContent__big-img
+                .sliderContent__small-img-container
+                  img(src='./../../images/slider_img/image-1.jpeg' ).sliderContent__small-img
+                  img(src='./../../images/slider_img/image-3.jpeg' ).sliderContent__small-img
+                  img(src='./../../images/slider_img/image-4.jpeg' ).sliderContent__small-img
+                  img(src='./../../images/slider_img/image-5.jpeg' ).sliderContent__small-img
+                  img(src='./../../images/slider_img/image.jpeg' ).sliderContent__small-img
+                  img(src='./../../images/slider_img/image-2.jpeg' ).sliderContent__small-img
+              .sliderContent__icons
+                +icon('1.png', 'Площадь', '110 кв.м')
+                +icon('2.png', 'Материал', '175 000 ₽')
+                +icon('3.png', 'Монтаж', '95 000 ₽')
+            .works__content__desc
+              p.works__content__room-name Квартира на улице Каюма Насыри, 44 <br />(г. Казань)
+              p.works__content__room-desc <span class ='works__content__room-desc_num'>1.</span> Сделали переход от центрального отопления  к индивидуальному
+                <br /> <span class ='works__content__room-desc_num'>2.</span> Закатали теплые полы по всей квартире
+                <br /> <span class ='works__content__room-desc_num'>3.</span> В квартире заказчика был установлен ламинат (максимально
+                <br /> допустимая температура для ламината 28 градусов) и плитка
+                <br /> максимально допустимая температура 35 градусов) было принято
+                <br /> решение установить коллекторы и настроить им разрешенную
+                <br /> температуру.
+          .swiper-slide
+            .sliderContent
+              .sliderContent__images
+                img(src='./../../images/slider_img/image-1.jpeg' tabindex='2').sliderContent__big-img
+                .sliderContent__small-img-container
+                  img(src='./../../images/slider_img/image-1.jpeg').sliderContent__small-img
+                  img(src='./../../images/slider_img/image-3.jpeg').sliderContent__small-img
+                  img(src='./../../images/slider_img/image-4.jpeg').sliderContent__small-img
+                  img(src='./../../images/slider_img/image-5.jpeg').sliderContent__small-img
+                  img(src='./../../images/slider_img/image.jpeg').sliderContent__small-img
+                  img(src='./../../images/slider_img/image-2.jpeg').sliderContent__small-img
+              .sliderContent__icons
+                +icon('1.png', 'Площадь', '110 кв.м')
+                +icon('2.png', 'Материал', '175 000 ₽')
+                +icon('3.png', 'Монтаж', '95 000 ₽')
+            .works__content__desc
+              p.works__content__room-name Квартира на улице Каюма Насыри, 44 <br />(г. Казань)
+              p.works__content__room-desc <span class ='works__content__room-desc_num'>1.</span> Сделали переход от центрального отопления  к индивидуальному
+                <br /> <span class ='works__content__room-desc_num'>2.</span> Закатали теплые полы по всей квартире
+                <br /> <span class ='works__content__room-desc_num'>3.</span> В квартире заказчика был установлен ламинат (максимально
+                <br /> допустимая температура для ламината 28 градусов) и плитка
+                <br /> максимально допустимая температура 35 градусов) было принято
+                <br /> решение установить коллекторы и настроить им разрешенную
+                <br /> температуру.
+      .button-next
+      .button-prev
+    .works__button-wrap
+      +button('Выхвать специалиста-сметчика бесплатно', 'button', 'button-wrap')
