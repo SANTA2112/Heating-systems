@@ -1,0 +1,24 @@
+include ../mixins/_button
+.certificates
+  .wrapper
+    .certificates__heading-wrap
+      h2.header__heading <span class='header__heading-style'>Будем знакомы</span> <br /> Наши сертификаты
+      p.certificates__name Музаффаров Н. М
+      .certificates__man
+    .dignitys
+      .dignitys__dignity
+        .dignitys__dignity-img.dignitys__dignity-img_1
+        p.dignitys__dignity-desc Стаж не прирывной <br /> работы 5 лет
+      .dignitys__dignity
+        .dignitys__dignity-img.dignitys__dignity-img_2
+        p.dignitys__dignity-desc Профессиональное <br /> образование
+      .dignitys__dignity
+        .dignitys__dignity-img.dignitys__dignity-img_3
+        p.dignitys__dignity-desc Сертифицированный <br /> специалист
+      .dignitys__dignity
+        .dignitys__dignity-img.dignitys__dignity-img_4
+        p.dignitys__dignity-desc Использую <br /> профессиональное <br /> оборудование
+    .certificate-block
+      img(src='./../../images/certificates/cer1.jpg').certificate-block__elem
+      img(src='./../../images/certificates/cer2.jpg').certificate-block__elem
+      +button('Задать вопрос специалисту бесплатно', 'button', 'button-wrap')
