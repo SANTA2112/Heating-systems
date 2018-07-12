@@ -1,0 +1,72 @@
+.plan
+  padding-top 9.6rem
+  padding-bottom 10rem
+  &__button-wrap
+    margin-top 4.9rem
+    text-align center
+  &__steps
+    display flex
+    justify-content space-between
+    margin-top 7.5rem
+  &__step
+    position relative
+    &-desc
+      color #000000
+      font-size 1.8rem
+      line-height 2.6rem
+      text-align center
+      margin-top 1.9rem
+    &-arrow
+      position absolute
+      top 1.7rem
+      right 0
+      background: url('./../../images/arrow1.png')
+      width 5.1rem
+      height 4.1rem
+      &-pos1
+        right -4.8rem
+      &-pos2, &-pos3, &-pos4, &-pos5
+        right -4.9rem
+    &-img
+      width 7.3rem
+      height 7.3rem
+      box-shadow 0 0.5rem 1rem rgba(227, 69, 74, 0.42)
+      background-color #ffffff
+      position relative
+      border-radius 50%
+      margin: 0 auto
+      &:before
+        content: ''
+        position absolute
+        height 5.1rem
+        width 5.1rem
+        top 50%
+        left 50%
+        transform: translate(-50%,-50%)
+        background-image: url('./../../images/plan-sprite.png')
+      &_1
+        &:before
+          content ''
+          background-position-x: 0
+      &_2
+        &:before
+          content ''
+          background-position-x: -19.9rem
+      &_3
+        &:before
+          content ''
+          background-position-x: -40rem
+      &_4
+        &:before
+          content ''
+          background-position-x: -60rem
+      &_5
+        &:before
+          content ''
+          background-position-x: -80rem
+      &_6
+        &:before
+          content ''
+          background-position-x: 110.5rem
+
+
