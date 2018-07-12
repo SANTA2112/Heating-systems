@@ -18,3 +18,17 @@ const activeTab = num => {
 activeTab(0);
 
 tabs.forEach(tab => tab.onclick = activeTab.bind('', tabs.indexOf(tab)))
+
+// slider-images
+
+const sliderImages = document.querySelectorAll('.sliderContent__small-img');
+const sliderMainImage = document.querySelector('.sliderContent__big-img');
+
+sliderImages.forEach(el => el.onclick = e => {
+  e.target.classList.add('active');
+  sliderMainImage.setAttribute("src", e.target.getAttribute('src'))
+});
+
+sliderImages.forEach(el => el.onblur = e =>  e.target.classList.remove('active'));
+
+var swiper = new Swiper('.swiper-container', {});

@@ -1,0 +1,100 @@
+.works
+  padding-top 9.6rem
+  background url('./../../images/pattern.png') center center/contain #f5f5d7
+  &__content
+    display flex
+    margin-top 5rem
+    &__desc
+      margin-left 2.8rem
+      margin-top -0.5rem
+    &__room-name
+      color #000000
+      font-size 2.4rem
+      font-weight 700
+      line-height 3.7rem
+    &__room-desc
+      color ligc
+      font-size 1.8rem
+      font-weight 400
+      margin-top 4.7rem
+      &_num
+        line-height 1.4rem
+        font-size 1.6rem
+
+.sliderContent
+  &__big-img
+    width 54.9rem
+    height 30.5rem
+    object-fit: cover
+    border 1.2rem solid #fff
+  &__small-img
+    width 7.4rem
+    height 4.8rem
+    object-fit: cover
+    border 0.2rem solid #fff
+    &.active
+      border-color #e31e25
+  &__small-img-container
+    display flex
+    justify-content space-between
+    max-width 54.9rem
+    margin-top 1.6rem
+  &__icons
+    display flex
+    align-items flex-end
+    justify-content space-between
+    max-width 54.9rem
+    margin-top 2.4rem
+  &__icon-elem
+    display flex
+    align-items center
+  &__icon_desc-wrap
+    margin-left 1.9rem
+  &__icon-name
+    color #000000
+    font-weight 700
+    font-size 1.8rem
+  &__icon-desc
+    color ligc
+    font-size 1.8rem
+    font-weight 400
+    line-height 2.6rem
+
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}
+html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
