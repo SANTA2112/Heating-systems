@@ -4,7 +4,7 @@ include ../mixins/_button
     h2.header__heading <span class='header__heading-style'>наши звездные <br /> клиенты</span>
     .stars-wrap
       .stars__star
-        img(src='./../../images/stars/------------------------.jpg' alt='star').stars__star-img
+        img(data-src='./../../images/stars/------------------------.jpg' alt='star').stars__star-img
         .stars__star__desc-wrap
           p.stars__star-name Чулпан <br /> Юсупова
           p.stars__star-descf Певица татарской эстрады
@@ -12,7 +12,7 @@ include ../mixins/_button
             <br /> монтажу отопления в
             <br /> частном доме
       .stars__star
-        img(src='./../../images/stars/-----5.jpg' alt='star').stars__star-img.stars__star-img-size
+        img(data-src='./../../images/stars/-----5.jpg' alt='star').stars__star-img.stars__star-img-size
         .stars__star__desc-wrap
           p.stars__star-name Ирек <br /> Хафизов
           p.stars__star-descf Заслуженный артист <br /> Республики Татарстан
@@ -20,4 +20,4 @@ include ../mixins/_button
             <br /> монтажу отопления в
             <br /> частном доме
     .works__button-wrap
-      +button('Выхвать специалиста-сметчика бесплатно', 'button', 'button-wrap')
+      +button('Вызвать специалиста-сметчика бесплатно', 'button', 'button-wrap')

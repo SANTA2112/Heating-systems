@@ -45,7 +45,7 @@ gulp.task('html', () => {
   gulp.src('./src/pug/**/!(_)*.pug')
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(pug({
-      pretty: true
+      pretty: false
     }))
     .pipe(gulp.dest('./build'))
     .pipe(debug({title: 'Pug:'}))

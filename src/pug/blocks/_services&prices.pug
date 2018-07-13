@@ -6,7 +6,7 @@ include ../mixins/_servise
       p.header__description.servises__description_mar Нужно заменить старое оборудование? <br /> Вы переехали в новое помещения и хотите жить в тепле и комфорте? <br /> Устали от частых поломок? <br /> Будем рады помочь!  Мы специализируемся на таких работах как:
     .servises__tabs
       .servises__tabs-navigation
-        .tab_btn.tab_btn_mr-l(data-tab="1")
+        .tab_btn.tab_btn_mr-l.active(data-tab="1")
           .tab_btn-icon.tab_btn-icon-1
           p.tab_btn-name Монтаж
         .tab_btn.tab_btn_mr-l2(data-tab="2")
@@ -19,7 +19,7 @@ include ../mixins/_servise
           .tab_btn-icon.tab_btn-icon-4
           p.tab_btn-name Обслуживание
       .servises__tabs-content
-        .servises__type-of-servises(data-tab="1")
+        .servises__type-of-servises.active(data-tab="1")
           .servises__items-wrap
             +servise('Монтаж напольных котельных', ' от 7900 руб.', 'Рассчитать стоимость работ', 'Газовые', 'Электрические', 'Твердотопливные', 'На жидком топливе', 'Пеллетные котлы', 'Комбинированные')
             +servise('Монтаж настенных котельных', ' от 7900 руб.', 'Рассчитать стоимость работ', 'Газовые', 'Электрические', 'Твердотопливные', 'На жидком топливе', 'Пеллетные котлы', 'Комбинированные')

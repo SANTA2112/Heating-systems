@@ -18,7 +18,7 @@
     display flex
     align-items center
   &__inst-contact
-    color ligc
+    color #000
     font-size 1.8rem
     text-decoration none
     &:after
@@ -27,7 +27,11 @@
       height 0.2rem
       margin-top 0.1rem
       display block
-      background-color ligc
+      background-color transparent
+    &:hover, &:active
+      color ligc
+      &:after
+        background-color ligc
   &__inst-contactimg
     width 2.6rem
     height 2.6rem
@@ -40,12 +44,15 @@
     margin-right 3.3rem
     text-decoration none
     &:after
-      content ''
-      width 100%
-      height 0.2rem
-      margin-top 0.1rem
-      display block
-      background-color #000
+        content ''
+        width 100%
+        height 0.2rem
+        margin-top 0.1rem
+        display block
+        background-color transparent
+    &:hover, &:active
+      &:after
+        background-color #000
   &__advantages
     display flex
     justify-content space-between

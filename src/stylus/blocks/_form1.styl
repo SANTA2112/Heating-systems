@@ -1,4 +1,4 @@
-.form-modal
+.form-modal1, .form-modal2, .form-modal3, .form-modal4
   display none
   justify-content center
   align-items center
@@ -14,27 +14,95 @@
   will-change opacity
   z-index: 1
 
-.form-modal.show
+.form-modal1.show, .form-modal2.show, .form-modal3.show, .form-modal4.show
   opacity 1
 
-.form-works
+.form-callback, .form-specialist, .form-cons
   display flex
   flex-direction column
-  max-width 40rem
-  padding 4rem
-  border 5px solid blue
+  max-width 37.4rem
+  border 0.7rem solid #239cc8
+  padding 4.2rem 4.5rem 3.8rem 5.5rem
   padding 2.4rem
   border-radius .5rem
   position: relative
   background-color #fff
+.form-works
+  display flex
+  flex-direction column
+  max-width 37.4rem
+  border 0.7rem solid #239cc8
+  padding 4.2rem 4.5rem 3.8rem 5.5rem
+  padding 2.4rem
+  border-radius .5rem
+  position: relative
+  background-color #fff
+  &__select-label
+    font-size: 1.4rem
+    border 0.1rem solid rgba(35, 156, 200, 0.22)
+    padding 2.1rem 0 1.7rem 2.2rem
+    background-color #f7f7f7
+    max-width 27.9rem
+    position relative
+    color ligc
+    &:before
+      content: '▼'
+      position absolute
+      right 2.1rem
+      top 50%
+      transform: translate(-50%, -50%)
   &__select
     margin-bottom 1rem
+    border 0.1rem solid rgba(35, 156, 200, 0.22)
+    position: relative;
+    cursor: pointer;
+    user-select:none;
+    outline: none;
+    max-width 27.9rem
+    &.active .form-works__select-values
+      display: block
+  &__select-values
+    position: absolute;
+    background-color #fff
+    top: 0;
+    left: 0; right: 0;
+    display: none;
+    z-index: 1
+  &__select-value
+    border 0.1rem solid rgba(35, 156, 200, 0.22)
+    padding 1.7rem 0 1.5rem 2.2rem
+    font-size: 1.4rem
+    background-color #fff
+    position relative
+    &:hover
+      color #e31e25
+      &:before
+        content: ''
+        position absolute
+        right 2.1rem
+        top 50%
+        transform: translate(-50%, -50%)
+        width 1.9rem
+        height 1.5rem
+        background url('./../../images/checked.png') center center/cover
+
+
 
 .form__header
-  font-size 1.8rem
-  margin-bottom 1rem
+  font-size 2.4rem
+  font-weight 400
+  line-height 2.6rem
+  color #239cc8
+  margin-bottom 1.9rem
   text-align center
 
 .form__input
   margin-bottom 1rem
-  padding 1rem
+  padding 2.1rem 0 1.7rem 2.2rem
+  font-size 1.4rem
+  width 27.9rem
+  border none
+  border 0.1rem solid rgba(35, 156, 200, 0.22)
+  &-size
+    height 18rem
+    resize: none

@@ -1,0 +1,8 @@
+include ../mixins/_button
+.form-modal4
+  form.form-cons
+    h4.form__header Заполните форму, чтобы <br />  получить консультацию <br /> специалиста
+    input(name='name' placeholder='Введите имя (не обязательно)').form__input
+    input(name='phone' placeholder='Телефон или Email (для ответа)' required).form__input
+    +button('Получить консультацию', 'button button_fix-fns2', 'button-wrap button-wrap_fix-pad1 button-wrap_fix-width1')
+    .confidentiality Согласен <a href='./../../vendor/lol.txt' class='confidentiality__link' download>с политикой конфиденциальности </span></a>

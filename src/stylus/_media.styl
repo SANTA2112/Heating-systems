@@ -109,6 +109,20 @@
         right 3.2rem
   .button-next, .button-prev
     display none
+  .thanks
+    padding 0
+  .wrapper.thanks__wrapper
+    display flex
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  .header__img_fix
+    display block
+    transform: translateX(0)
+    margin-top 2rem
+  .header__heading.thanks__heading
+    font-size: 4.5rem
 
 @media only screen and (max-width: 576px)
   .servises__description_mar
@@ -178,3 +192,11 @@
     &__step
       &-arrow-pos2, &-arrow-pos4
         right -0.8rem
+  .header__img_fix
+    display none
+  .header__heading.thanks__heading
+    font-size: 3.4rem
+    line-height: 4rem
+  .mainlink
+    padding 1rem 1.5rem
+    text-align center

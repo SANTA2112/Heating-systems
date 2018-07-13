@@ -1,17 +1,25 @@
-.form-modal
-  form(action="" method='POST').form-works
+include ../mixins/_button
+.form-modal1
+  form.form-works
     h4.form__header Заполните форму <br /> чтобы расчитать <br /> стоимость
     input(name='area' placeholder='Площадь помещения (кв.м)').form__input
-    select(name="typeofapartment" placeholder='Выберите тип помещения').form-works__select
-      option(value="") value 1
-      option(value="") value 2
-      option(value="") value 3
-      option(value="") value 4
-    select(name="typeofwork" placeholder='Выберите тип работ').form-works__select
-      option(value="") Монтаж
-      option(value="") Замена
-      option(value="") Ремонт
-      option(value="") Обслуживание
+    .form-works__select(tabindex="1")
+      .form-works__select-label Выберете тип помещения
+      input(type="hidden", name="typeofarea")
+      .form-works__select-values
+        .form-works__select-value value 1
+        .form-works__select-value value 2
+        .form-works__select-value value 3
+        .form-works__select-value value 4
+    .form-works__select(tabindex="1")
+      .form-works__select-label Выберете вид работ
+      input(type="hidden", name="typeofwork")
+      .form-works__select-values
+        .form-works__select-value Монтаж
+        .form-works__select-value Замена
+        .form-works__select-value Ремонт
+        .form-works__select-value Обслуживание
     input(name='phone' placeholder='Телефон для уточнения деталей' required).form__input
-    button.form__button#works Расчитать стоимость
+    +button('Расчитать стоимость', 'button button_fix-fns', 'button-wrap button-wrap_fix-pad1')
+    .confidentiality Согласен <a href='./../../vendor/lol.txt' class='confidentiality__link' download>с политикой конфиденциальности </span></a>
 

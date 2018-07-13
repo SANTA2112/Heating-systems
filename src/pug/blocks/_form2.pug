@@ -1,0 +1,8 @@
+include ../mixins/_button
+.form-modal2
+  form.form-callback
+    h4.form__header Заполните форму <br /> чтобы задать вопрос <br /> специалисту
+    textarea(name='question' placeholder='Введите ваш вопрос').form__input.form__input-size
+    input(name='phone' placeholder='Телефон или Email (для ответа)' required).form__input
+    +button('Задать вопрос', 'button button_fix-fns button_fix-width', 'button-wrap button-wrap_fix-pad1')
+    .confidentiality Согласен <a href='./../../vendor/lol.txt' class='confidentiality__link' download>с политикой конфиденциальности </span></a>
