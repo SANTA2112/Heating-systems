@@ -1,4 +1,19 @@
+@media (min-width 768px)
+  .mobile-slider
+    display none
 @media only screen and (max-width 768px)
+  .servises__description_mar
+    margin-bottom 2rem
+  .servises__tabs
+    display none
+  .mobile-slider
+    display block
+  .servise
+    display flex
+    align-items center
+    flex-direction column
+    &__header
+      text-align center
   .header
     &__contacts
       flex-direction column
@@ -96,6 +111,12 @@
     display none
 
 @media only screen and (max-width: 576px)
+  .servises__description_mar
+    margin-bottom 2rem
+  .servises__tabs
+    display none
+  .mobile-slider
+    display block
   .header
     &__left-side, &__right-side
       flex-direction column
@@ -128,7 +149,7 @@
     &:last-child
       margin-top 2rem
   .sliderContent__big-img
-    width 39.9rem
+    width 32.9rem
   .sliderContent__small-img-container
     flex-wrap wrap
   .stars__star-img
@@ -146,7 +167,10 @@
       margin-bottom 0
   .certificate-block__elem
     &:first-child
-      margin-right 2rem
+      margin-right 0
+      margin-bottom 1rem
+  .certificate-block-wrap
+    text-align center
   .works__heading_fns
     font-size 4.8rem
   .plan

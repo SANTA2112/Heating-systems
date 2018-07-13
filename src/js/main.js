@@ -19,6 +19,9 @@ activeTab(0);
 
 tabs.forEach(tab => tab.onclick = activeTab.bind('', tabs.indexOf(tab)))
 
+
+
+
 // slider-images
 
 const sliderImages = document.querySelectorAll('.sliderContent__small-img');
