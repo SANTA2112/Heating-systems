@@ -1,6 +1,7 @@
 // tabs
 
 const qa = sel => [...document.querySelectorAll(sel)];
+
 qa('.tab_btn').forEach((tab, i) => tab.onclick = () => {
   const dis = arr => arr.forEach(i => i.classList.remove('active'));
   const add = el => el.classList.add('active')
@@ -11,23 +12,19 @@ qa('.tab_btn').forEach((tab, i) => tab.onclick = () => {
 // slider-images
 
 const sliderImages = document.querySelectorAll('.sliderContent__small-img');
-const firstSliderImg = document.querySelectorAll('.sliderContent')[0].querySelectorAll('.sliderContent__small-img');
-const secondSliderImg = document.querySelectorAll('.sliderContent')[1].querySelectorAll('.sliderContent__small-img');
-const sliderMainImage1 = document.querySelectorAll('.sliderContent__big-img');
-const slides = [...document.querySelectorAll('.sliderContent')];
 
+const sliderContent = document.querySelectorAll('.sliderContent');
 
-slides.forEach((el, index) => el.onclick = e => {
-  sliderMainImage1.forEach((el, i) => {
-    if(e.target.classList.contains('sliderContent__small-img') && index === i) {
-      sliderMainImage1[i].setAttribute("src", e.target.getAttribute('src'));
-    }
-    (e.target.getAttribute('src') === sliderMainImage1[i].getAttribute('src')) && e.target.classList.add('active');
+sliderContent.forEach(el => el.onmouseover = even => {
+  const sliderMainImage = el.querySelector('.sliderContent__big-img');
+  sliderImages.forEach(img => img.onclick = (e, b, c =sliderImages, d='src') => {
+    for(b of c) b.classList[b===img?'add':'remove']('active');
+    sliderMainImage.setAttribute(d, img.getAttribute(d));
   })
 })
 
-setInterval(() => firstSliderImg.forEach((el, i) => (el.getAttribute('src') !== sliderMainImage1[0].getAttribute('src')) && el.classList.remove('active')), 200)
-setInterval(() => secondSliderImg.forEach((el, i) => (el.getAttribute('src') !== sliderMainImage1[1].getAttribute('src')) && el.classList.remove('active')), 200)
+
+
 
 //certificates popap
 

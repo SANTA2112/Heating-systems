@@ -6,16 +6,16 @@ include ../mixins/_servise
       p.header__description.servises__description_mar Нужно заменить старое оборудование? <br /> Вы переехали в новое помещения и хотите жить в тепле и комфорте? <br /> Устали от частых поломок? <br /> Будем рады помочь!  Мы специализируемся на таких работах как:
     .servises__tabs
       .servises__tabs-navigation
-        .tab_btn.tab_btn_mr-l.active(data-tab="1")
+        .tab_btn.active(data-tab="1")
           .tab_btn-icon.tab_btn-icon-1
           p.tab_btn-name Монтаж
-        .tab_btn.tab_btn_mr-l2(data-tab="2")
+        .tab_btn(data-tab="2")
           .tab_btn-icon.tab_btn-icon-2
           p.tab_btn-name Замена
-        .tab_btn.tab_btn_mr-l3(data-tab="3")
+        .tab_btn(data-tab="3")
           .tab_btn-icon.tab_btn-icon-3
           p.tab_btn-name Ремонт
-        .tab_btn.tab_btn_mr-l4(data-tab="4")
+        .tab_btn(data-tab="4")
           .tab_btn-icon.tab_btn-icon-4
           p.tab_btn-name Обслуживание
       .servises__tabs-content
@@ -88,7 +88,7 @@ include ../mixins/_servise
     .swiper-container.mobile-slider
       .swiper-wrapper
         .swiper-slide
-          .tab_btn.tab_btn_mr-l
+          .tab_btn
             .tab_btn-icon.tab_btn-icon-1
             p.tab_btn-name Монтаж
           .swiper-container
@@ -118,7 +118,7 @@ include ../mixins/_servise
               .swiper-slide
                 +servise('Монтаж теплого пола', ' от 350 руб./кв', 'Рассчитать стоимость работ', 'Кремниевые', 'Плёночные', 'Концентрационные модули,', 'Фотосенсибилизированные')
         .swiper-slide
-          .tab_btn.tab_btn_mr-l2
+          .tab_btn
             .tab_btn-icon.tab_btn-icon-2
             p.tab_btn-name Замена
           .swiper-container
@@ -148,7 +148,7 @@ include ../mixins/_servise
               .swiper-slide
                 +servise('Замена труб отопления ', ' от 95 пог.м.руб.', 'Рассчитать стоимость работ', 'Накопительные,', 'Проточные', 'Электрические', 'Газовые')
         .swiper-slide
-          .tab_btn.tab_btn_mr-l3
+          .tab_btn
             .tab_btn-icon.tab_btn-icon-3
             p.tab_btn-name Ремонт
           .swiper-container
@@ -178,7 +178,7 @@ include ../mixins/_servise
               .swiper-slide
                 +servise('Промывка системы отопления', ' от 5500 руб.', 'Рассчитать стоимость работ', 'Кремниевые', 'Плёночные', 'Концентрационные модули,', 'Фотосенсибилизированные')
         .swiper-slide
-          .tab_btn.tab_btn_mr-l4
+          .tab_btn
             .tab_btn-icon.tab_btn-icon-4
             p.tab_btn-name Обслуживание
           .swiper-container
