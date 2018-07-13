@@ -22,19 +22,25 @@ tabs.forEach(tab => tab.onclick = activeTab.bind('', tabs.indexOf(tab)))
 // slider-images
 
 const sliderImages = document.querySelectorAll('.sliderContent__small-img');
-const sliderMainImage1 = [...document.querySelectorAll('.sliderContent__big-img')];
-const container = document.querySelector('.works__content');
+const firstSliderImg = document.querySelectorAll('.sliderContent')[0].querySelectorAll('.sliderContent__small-img');
+const secondSliderImg = document.querySelectorAll('.sliderContent')[1].querySelectorAll('.sliderContent__small-img');
+const sliderMainImage1 = document.querySelectorAll('.sliderContent__big-img');
+const slides = [...document.querySelectorAll('.sliderContent')];
 
-container.addEventListener('click', e => {
+
+
+slides.forEach((el, index) => el.onclick = e => {
   sliderMainImage1.forEach((el, i) => {
-    if(e.target.classList.contains('sliderContent__small-img')) {
+    if(e.target.classList.contains('sliderContent__small-img') && index === i) {
       sliderMainImage1[i].setAttribute("src", e.target.getAttribute('src'));
     }
     (e.target.getAttribute('src') === sliderMainImage1[i].getAttribute('src')) && e.target.classList.add('active');
   })
 })
 
-setInterval(() => sliderImages.forEach((el, i) => el.getAttribute('src') !== sliderMainImage1[0].getAttribute('src') && el.classList.remove('active')), 200)
+setInterval(() => firstSliderImg.forEach((el, i) => (el.getAttribute('src') !== sliderMainImage1[0].getAttribute('src')) && el.classList.remove('active')), 200)
+setInterval(() => secondSliderImg.forEach((el, i) => (el.getAttribute('src') !== sliderMainImage1[1].getAttribute('src')) && el.classList.remove('active')), 200)
+
 
 var swiper = new Swiper('.swiper-container', {
   navigation: {
