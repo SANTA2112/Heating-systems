@@ -16,7 +16,7 @@
       background-color ligc
       opacity 0.36
       margin-top 1.8rem
-      width 100%
+      width calc( 100% + 4.5rem)
       position absolute
       bottom 0
       left 0
@@ -79,8 +79,8 @@
       content ''
       position absolute
       bottom 0
-      left -20%
-      width 130%
+      left -8.5rem
+      width 273px
       height 8px
       background-color #e31e25
     .tab_btn-icon
@@ -92,6 +92,14 @@
         background-image url('./../../images/tabs_icons/3-active.png')
       &-4
         background-image url('./../../images/tabs_icons/4-active.png')
+  &_mr-l
+    margin-left 8.9rem
+  &_mr-l2
+    margin-left 20.9rem
+  &_mr-l3
+    margin-left 21.3rem
+  &_mr-l4
+    margin-left 16.8rem
   &-icon
     background url('./../../images/tabs_icons/1.png') center center/cover
     width 5.1rem
@@ -126,5 +134,5 @@
 }
 .tab_btn.active4:before {
   content ''
-  margin-left -4rem
+  left -4.5rem
 }

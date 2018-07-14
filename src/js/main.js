@@ -12,7 +12,6 @@ qa('.tab_btn').forEach((tab, i) => tab.onclick = () => {
 // slider-images
 
 const sliderImages = document.querySelectorAll('.sliderContent__small-img');
-
 const sliderContent = document.querySelectorAll('.sliderContent');
 
 sliderContent.forEach(el => el.onmouseover = even => {
@@ -28,37 +27,58 @@ sliderContent.forEach(el => el.onmouseover = even => {
 
 //certificates popap
 
-const certificates = document.querySelectorAll('.certificate-block__elem');
-const modalCert = document.querySelector('.modal-cert');
-const modalImg = document.querySelector('.modal-img');
+const modalCert = document.querySelector('.modal.modal-cert');
+const modalImg = document.querySelector('.modal.modal-cert .modal-img');
 const padding = window.innerWidth - document.body.offsetWidth;
+const closeMod = modals => {
+  modals.forEach(modal => modal.onclick = e => {
+    if(e.target === e.currentTarget) {
+      modal.classList.remove('show');
+      setTimeout(() => modal.style.display = '', 400);
+      setTimeout(() => {
+        document.body.style.overflow = '';
+        document.body.style.paddingRight = 0;
+      }, 300)
+    }
+  })
+}
 
-certificates.forEach(el => el.onclick = e => {
+qa('.certificate-block__elem').forEach(el => el.onclick = e => {
   modalCert.style.display = 'flex';
-  modalImg.style.marginLeft = 0;
-  modalImg.setAttribute('src', e.target.getAttribute('src'))
+  modalImg.setAttribute('src', e.target.getAttribute('data-src'))
   setTimeout(() => modalCert.classList.add('show'), 0);
-  document.body.style.paddingRight = `${padding}px`;
+  if(document.body.offsetWidth > 768) document.body.style.paddingRight = `${padding}px`;
   document.body.style.overflow = 'hidden';
 })
-modalCert.addEventListener('click', e => {
-  if(e.target === e.currentTarget) {
-    modalCert.classList.remove('show');
-    document.body.style.paddingRight = '';
-    document.body.style.overflow = '';
-    if(document.body.offsetWidth > 768) modalImg.style.marginLeft = padding + 'px';
-    setTimeout(() => modalCert.style.display = '', 400);
-  }
-});
+closeMod(qa('.modal'))
 
+const modalWork = document.querySelector('.modal.modal-works');
+const modalCallback = document.querySelector('.modal.modal-callback');
+const modalSpecialist= document.querySelector('.modal.modal-specialist');
+const modalCons = document.querySelector('.modal.modal-cons');
+const ButtonsWork = qa('button').filter(el => el.classList.contains('works-cost'));
+const ButtonsCallback = qa('button').filter(el => el.classList.contains('question'));
+const ButtonsSpecialist= qa('button').filter(el => el.classList.contains('call-spec'));
+const ButtonsCons  = qa('button').filter(el => el.classList.contains('cons'));
+
+const showForm = (form, buttons) => {
+  buttons.forEach(btn => btn.onclick = e => {
+    form.style.display = 'flex';
+    setTimeout(() => form.classList.add('show'), 0);
+    if(document.body.offsetWidth > 768) document.body.style.paddingRight = `${padding}px`;
+    document.body.style.overflow = 'hidden';
+  })
+}
+showForm(modalWork, ButtonsWork)
+showForm(modalCallback, ButtonsCallback)
+showForm(modalSpecialist, ButtonsSpecialist)
+showForm(modalCons, ButtonsCons)
 //forms
-const formModal1 = document.querySelector('.form-modal1');
-const formModal2 = document.querySelector('.form-modal2');
-const formModal3 = document.querySelector('.form-modal3');
-const formModal4 = document.querySelector('.form-modal4');
+/*
+const formModal1 = document.querySelector('.modal .form-works');
 const formBtns = document.querySelector('.servises__tabs-content');
 const formBtns1 = document.querySelector('.mobile-slider');
-const formWorks = document.querySelector('.form-works');
+const formWorks = document.querySelector('.modal .form-works');
 const formCallBack = document.querySelector('.form-callback');
 const formCons = document.querySelector('.form-cons');
 const formSpecialist = document.querySelector('.form-specialist');
@@ -67,52 +87,6 @@ const selectLabel = document.querySelectorAll('.form-works__select-label');
 const selectOptions1 = document.querySelectorAll('.form-works__select-values');
 const tabMenu = [...document.querySelectorAll('.servises__type-of-servises')];
 const mobileTab = [...document.querySelectorAll('.mobile-slider .swiper-wrapper[data-tab]')];
-const callBackButtons = [...document.querySelectorAll('button.button')];
-const callBackBut = callBackButtons.filter(el => el.textContent.includes('Заказать звонок'));
-const callBackCons = callBackButtons.filter(el => el.textContent.includes('Получить бесплатную консультацию'));
-const callBackSpecialist =  callBackButtons.filter(el => el.textContent.includes('Задать вопрос специалисту бесплатно'))
-const callSpecialist = callBackButtons.filter(el => el.textContent.includes('Вызвать специалиста-сметчика бесплатно'));
-const callbackCost = callBackButtons.filter(el => el.textContent.includes('Рассчитать точную стоимость монтажа'));
-
-callbackCost.forEach(el => el.onclick = e => {
-  formModal1.style.display = 'flex';
-  formWorks.style.marginLeft = 0;
-  setTimeout(() => formModal1.classList.add('show'), 0);
-  document.body.style.paddingRight = `${padding}px`;
-  document.body.style.overflow = 'hidden';
-})
-
-callSpecialist.forEach(el => el.onclick = e => {
-  formModal3.style.display = 'flex';
-  formSpecialist.style.marginLeft = 0;
-  setTimeout(() => formModal3.classList.add('show'), 0);
-  document.body.style.paddingRight = `${padding}px`;
-  document.body.style.overflow = 'hidden';
-})
-
-callBackSpecialist.forEach(el => el.onclick = e => {
-  formModal2.style.display = 'flex';
-  formCallBack.style.marginLeft = 0;
-  setTimeout(() => formModal2.classList.add('show'), 0);
-  document.body.style.paddingRight = `${padding}px`;
-  document.body.style.overflow = 'hidden';
-})
-
-callBackCons[0].addEventListener('click', e => {
-  formModal4.style.display = 'flex';
-  formCons.style.marginLeft = 0;
-  setTimeout(() => formModal4.classList.add('show'), 0);
-  document.body.style.paddingRight = `${padding}px`;
-  document.body.style.overflow = 'hidden';
-})
-
-callBackBut[0].addEventListener('click', e => {
-  formModal4.style.display = 'flex';
-  formCons.style.marginLeft = 0;
-  setTimeout(() => formModal4.classList.add('show'), 0);
-  document.body.style.paddingRight = `${padding}px`;
-  document.body.style.overflow = 'hidden';
-})
 
 select[0].addEventListener('click', e => {
   select[0].classList.toggle('active');
@@ -191,47 +165,8 @@ formBtns1.addEventListener('click', e => {
     document.body.style.paddingRight = `${padding}px`;
     document.body.style.overflow = 'hidden';
   }
-})
+})*/
 
-formModal1.addEventListener('click', e => {
-  if(e.target === e.currentTarget) {
-    formModal1.classList.remove('show');
-    document.body.style.paddingRight = '';
-    document.body.style.overflow = '';
-    formWorks.style.marginLeft = padding + 'px';
-    setTimeout(() => formModal1.style.display = '', 400);
-  }
-})
-
-formModal2.addEventListener('click', e => {
-  if(e.target === e.currentTarget) {
-    formModal2.classList.remove('show');
-    document.body.style.paddingRight = '';
-    document.body.style.overflow = '';
-    formCallBack.style.marginLeft = padding  + 'px';
-    setTimeout(() => formModal2.style.display = '', 400);
-  }
-})
-
-formModal3.addEventListener('click', e => {
-  if(e.target === e.currentTarget) {
-    formModal3.classList.remove('show');
-    document.body.style.paddingRight = '';
-    document.body.style.overflow = '';
-    formSpecialist.style.marginLeft = padding  + 'px';
-    setTimeout(() => formModal3.style.display = '', 400);
-  }
-})
-
-formModal4.addEventListener('click', e => {
-  if(e.target === e.currentTarget) {
-    formModal4.classList.remove('show');
-    document.body.style.paddingRight = '';
-    document.body.style.overflow = '';
-    formCons.style.marginLeft = padding  + 'px';
-    setTimeout(() => formModal4.style.display = '', 400);
-  }
-})
 
 
 //slider
