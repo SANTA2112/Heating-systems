@@ -1,6 +1,6 @@
-mixin advantage(primetext='', text)
+mixin advantage(primetext='', text, className='')
   .header__advantage
     .header__advantage-icon
     span.grey-text=primetext
-    span.sometext=text
+    span(class='sometext' + className)=text
 

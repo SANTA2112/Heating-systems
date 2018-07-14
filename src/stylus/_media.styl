@@ -1,7 +1,27 @@
 @media (min-width 768px)
+  .modal-img
+    width 30%
   .mobile-slider
     display none
 @media only screen and (max-width 768px)
+  .button-next.btn-tab, .button-prev.btn-tab
+    background: url('./../../images/slider-icon/slider-nav-active.png') no-repeat
+    display block
+    left 0
+    right 0
+    z-index 10
+  .button-next.btn-tab
+    transform: translate(52rem, -10rem)
+  .button-prev.btn-tab
+    transform:translate(20rem, -10rem) scale(-1)
+  .button-next.btn-tab.swiper-button-disabled
+    background-image: url('./../../images/slider-icon/slider-nav-disable.png')
+    transform: translate(52rem, -10rem) scaleX(-1)
+  .button-prev.btn-tab.swiper-button-disabled
+    background-image: url('./../../images/slider-icon/slider-nav-disable.png')
+    transform: translate(20rem, -10rem) scaleX(1)
+  .modal-img
+    width 50%
   .servises__description_mar
     margin-bottom 2rem
   .servises__tabs
@@ -20,8 +40,6 @@
     &__left-side, &__right-side
       width 100%
       justify-content space-around
-    &__left-side
-      margin-bottom 2rem
     &__advantages
       flex-direction column
       margin-left 6rem
@@ -64,6 +82,7 @@
   .swiper-slide
     flex-direction column
     justify-content center
+    align-items center
   .sliderContent
     &__images-wrap
       max-width 54.9rem
@@ -91,8 +110,13 @@
       display none
   .certificate-block
     flex-direction column
+    &__elem
+      margin-right 0
     &-wrap
       margin-bottom 5rem
+      display flex
+      justify-content space-around
+      width 100%
   .tab_btn
     &:before
       display none
@@ -125,6 +149,19 @@
     font-size: 4.5rem
 
 @media only screen and (max-width: 576px)
+  .button-next.btn-tab
+    transform: translate(26rem, -10rem)
+  .button-prev.btn-tab
+    transform: translate(0rem, -10rem) scale(-1)
+  .button-next.btn-tab.swiper-button-disabled
+    transform: translate(26rem, -10rem) scaleX(-1)
+  .button-prev.btn-tab.swiper-button-disabled
+    transform: translate(0rem, -10rem) scaleX(1)
+  .header__description.benefits__description_mar
+    margin-bottom 0
+  .sometext.fix
+    display block
+    margin-left 4.6rem
   .servises__description_mar
     margin-bottom 2rem
   .servises__tabs
@@ -134,26 +171,31 @@
   .header
     &__left-side, &__right-side
       flex-direction column
-    &__logo, &__phone-contact
+    &__logo, &__phone-contact, &__inst-contactwrap
       margin 0
-    &__phone-contact
-      margin-bottom 1rem
+      margin-bottom: 3rem
+      text-align center
     &__advantages
       margin-left 0
     &__stages
       flex-direction column
       align-items center
     &__stage
-      margin-bottom 2rem
+      margin-bottom 4rem
+      display flex
+      align-items center
       &:last-child
         margin-bottom 0
+    &__stage-number
+      left 20px
+
   .benefit
     &-container
       justify-content center
   .dangers__problems
     justify-content center
   .dangers__form
-    padding 4.1rem 7rem 1.9rem
+    padding 4.1rem 2rem 1.9rem
   .sliderContent__icons
     flex-wrap wrap
     justify-content center
@@ -173,6 +215,7 @@
     margin-top 2rem
   .header__heading
     font-size 4.8rem
+    line-height: 5.2rem
   .button-next, .button-prev
     display none
   .dignitys__dignity

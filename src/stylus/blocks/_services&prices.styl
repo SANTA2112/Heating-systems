@@ -1,6 +1,8 @@
 .servises
   background url('./../../images/pattern.png') center center/contain #f5f5d7
   padding 9.6rem 0 10rem
+  &__tabs-content
+    max-width: 97.4%
   &__description_mar
     margin 0
     margin-left 10.8rem
@@ -16,7 +18,7 @@
       background-color ligc
       opacity 0.36
       margin-top 1.8rem
-      width calc( 100% + 4.5rem)
+      width 97.4%
       position absolute
       bottom 0
       left 0
@@ -31,16 +33,15 @@
         display block
 
 .servise
+  width 24rem
   &__header
     color #000000
     font-size 2rem
     font-weight 700
     line-height 2.6rem
     text-transform: uppercase
-    max-width 23.4rem
   &__items
     margin-top 2.7rem
-    max-width 27.2rem
   &__item
     color ligc
     list-style none
@@ -80,7 +81,7 @@
       position absolute
       bottom 0
       left -8.5rem
-      width 273px
+      width 29.2rem
       height 8px
       background-color #e31e25
     .tab_btn-icon
@@ -92,14 +93,7 @@
         background-image url('./../../images/tabs_icons/3-active.png')
       &-4
         background-image url('./../../images/tabs_icons/4-active.png')
-  &_mr-l
-    margin-left 8.9rem
-  &_mr-l2
-    margin-left 20.9rem
-  &_mr-l3
-    margin-left 21.3rem
-  &_mr-l4
-    margin-left 16.8rem
+
   &-icon
     background url('./../../images/tabs_icons/1.png') center center/cover
     width 5.1rem
@@ -119,20 +113,18 @@
   &.active
     color #e31e25
 
-
-.tab_btn.active1:before {
-  content ''
-  margin-left -8.9rem
-}
-.tab_btn.active2:before {
-  content ''
-  margin-left -8.9rem
-}
-.tab_btn.active3:before {
-  content ''
-  margin-left -8.9rem
-}
 .tab_btn.active4:before {
   content ''
   left -4.5rem
 }
+.button-tab-next, .button-tab-prev
+  width 10rem
+  height 10rem
+  position absolute
+  top 0
+  left 0
+  background-color #000
+
+.button-tab-next
+  right 0
+  left auto
