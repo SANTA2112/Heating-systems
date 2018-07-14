@@ -21,5 +21,7 @@ include ../mixins/_button
         .form-works__select-value Обслуживание
     input(name='phone' placeholder='Телефон для уточнения деталей' required).form__input
     +button('Расчитать стоимость', 'button button_fix-fns', 'button-wrap button-wrap_fix-pad1')
-    .confidentiality Согласен <a href='./../../vendor/lol.txt' class='confidentiality__link' download>с политикой конфиденциальности </span></a>
+    .confidentiality
+      input(type='checkbox' name='checkbox' checked).checkbox
+      span Согласен <a href='./../../vendor/lol.txt' class='confidentiality__link' download>с политикой конфиденциальности </span></a>
 

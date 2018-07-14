@@ -4,6 +4,15 @@
   .mobile-slider
     display none
 @media only screen and (max-width 768px)
+  .plan
+    &__steps
+      justify-content space-around
+    &__step
+      width 50%
+      &-arrow-pos1, &-arrow-pos2, &-arrow-pos3, &-arrow-pos4, &-arrow-pos5
+        right -1.8rem
+      &-arrow-pos2, &-arrow-pos4
+        right 3.2rem
   .button-next.btn-tab, .button-prev.btn-tab
     background: url('./../../images/slider-icon/slider-nav-active.png') no-repeat
     display block
@@ -32,6 +41,7 @@
     display flex
     align-items center
     flex-direction column
+    margin-top 2rem
     &__header
       text-align center
   .header
@@ -56,6 +66,7 @@
   .benefit
     max-width 35rem
   .servises
+    padding-bottom 0
     &__tabs
       margin-top 4rem
     &__tabs-navigation
@@ -71,6 +82,7 @@
       margin-left 0
       margin-top 2rem
     &__form
+      padding 4.1rem 2rem 1.9rem
       &:before, &:after
         display none
     &__form-data
@@ -90,7 +102,8 @@
     &__small-img-container
       margin 1.6rem auto 0
     &__icons
-      margin 2.4rem auto 0
+      flex-direction: column
+      align-items center
   .works__content__desc
     margin: 2rem auto 0
   .stars
@@ -118,19 +131,24 @@
       justify-content space-around
       width 100%
   .tab_btn
-    &:before
-      display none
-    &_mr-l, &_mr-l2, &_mr-l3, &_mr-l4
-      margin 0
-  .plan
-    &__steps
-      justify-content space-around
-    &__step
-      width 50%
-      &-arrow-pos1, &-arrow-pos2, &-arrow-pos3, &-arrow-pos4, &-arrow-pos5
-        right -1.8rem
-      &-arrow-pos2, &-arrow-pos4
-        right 3.2rem
+    &.active
+      color ligc
+      &:before
+        width 26.2em
+      .tab_btn-icon
+        &-1
+          background-image url('./../../images/tabs_icons/1.png')
+        &-2
+          background-image url('./../../images/tabs_icons/2.png')
+        &-3
+          background-image url('./../../images/tabs_icons/3.png')
+        &-4
+          background-image url('./../../images/tabs_icons/4.png')
+  .tab_btn.active5:before
+    content ''
+    left -3.5rem
+
+
   .button-next, .button-prev
     display none
   .thanks
@@ -149,6 +167,18 @@
     font-size: 4.5rem
 
 @media only screen and (max-width: 576px)
+  .plan
+    &__steps
+      flex-direction column
+      align-items center
+      justify-content space-around
+    &__step
+      margin-bottom 2rem
+      position static
+      &-arrow
+        margin 2rem auto 0
+        position static
+        transform: rotate(90deg)
   .button-next.btn-tab
     transform: translate(26rem, -10rem)
   .button-prev.btn-tab
@@ -188,7 +218,10 @@
         margin-bottom 0
     &__stage-number
       left 20px
-
+  .works__content__room-name
+    margin-top 2rem
+  .works__content__room-desc
+    margin-top 1.7rem
   .benefit
     &-container
       justify-content center
@@ -196,21 +229,31 @@
     justify-content center
   .dangers__form
     padding 4.1rem 2rem 1.9rem
+  .sliderContent__icon_desc-wrap
+    margin 0
+    margin-top 1rem
   .sliderContent__icons
     flex-wrap wrap
     justify-content center
   .sliderContent__icon-elem
-    &:first-child
-      margin-right 2rem
-    &:last-child
-      margin-top 2rem
+    flex-direction: column
+    justify-content center
+    margin-top 1rem
   .sliderContent__big-img
     width 32.9rem
   .sliderContent__small-img-container
     flex-wrap wrap
+  .sliderContent__small-img
+    margin-bottom 1rem
+  .stars__star
+    display flex
+    flex-direction column
+  .stars__star-descs
+    margin-top 2rem
   .stars__star-img
     width 17.2rem
     height 24rem
+    margin-bottom 1rem
   .stars__star-descs-mar
     margin-top 2rem
   .header__heading
@@ -219,22 +262,22 @@
   .button-next, .button-prev
     display none
   .dignitys__dignity
-    margin-bottom 1rem
+    margin-bottom 2rem
     &:last-child
       margin-bottom 0
   .certificate-block__elem
     pointer-events none
+    margin-bottom 2rem
     &:first-child
       margin-right 0
-      margin-bottom 1rem
+      margin-bottom 2rem
   .certificate-block-wrap
     text-align center
+    display flex
+    flex-direction column
+    align-items center
   .works__heading_fns
-    font-size 4.8rem
-  .plan
-    &__step
-      &-arrow-pos2, &-arrow-pos4
-        right -0.8rem
+    font-size 4.3rem
   .header__img_fix
     display none
   .header__heading.thanks__heading
@@ -243,3 +286,10 @@
   .mainlink
     padding 1rem 1.5rem
     text-align center
+  .footer__wrap
+    flex-direction column
+    align-items center
+
+@media (max-width: 320px)
+  .sliderContent__big-img
+    width 29rem

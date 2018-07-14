@@ -32,5 +32,7 @@ include ../mixins/_button
           label.group__label Введите Ваш телефон
         .dangers__btn-wrap
           +button('Получить бесплатную консультацию', 'button button_fix-pad3 button_fix-fns1', 'button-wrap')
-          .confidentiality Согласен <a href='./../../vendor/lol.txt' class='confidentiality__link' download>с политикой конфиденциальности </span></a>
+          .confidentiality
+            input(type='checkbox' name='checkbox' checked).checkbox
+            span Согласен <a href='./../../vendor/lol.txt' class='confidentiality__link' download>с политикой конфиденциальности </span></a>
 
