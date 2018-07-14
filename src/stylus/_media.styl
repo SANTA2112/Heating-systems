@@ -1,9 +1,15 @@
-@media (min-width 768px)
+@media (min-width 769px)
   .modal-img
     width 30%
   .mobile-slider
     display none
+  .servises__tabs.planshet-tab
+    display none
+  .hidden_man
+    display none
 @media only screen and (max-width 768px)
+  .dignitys__dignity
+    margin-bottom 2rem
   .plan
     &__steps
       justify-content space-around
@@ -14,21 +20,23 @@
       &-arrow-pos2, &-arrow-pos4
         right 3.2rem
   .button-next.btn-tab, .button-prev.btn-tab
-    background: url('./../../images/slider-icon/slider-nav-active.png') no-repeat
-    display block
+      background: url('./../../images/slider-icon/slider-nav-active.png') no-repeat
+      display block
+      left -9999px
+      right 0
+      z-index 10
+  .button-next.btn-tab.mobile
+    transform: translate(50rem, 13rem)
     left 0
-    right 0
-    z-index 10
-  .button-next.btn-tab
-    transform: translate(52rem, -10rem)
-  .button-prev.btn-tab
-    transform:translate(20rem, -10rem) scale(-1)
-  .button-next.btn-tab.swiper-button-disabled
+  .button-prev.btn-tab.mobile
+    transform: translate(20rem, 13rem) scaleX(-1)
+    left 0
+  .button-prev.btn-tab.mobile.swiper-button-disabled
     background-image: url('./../../images/slider-icon/slider-nav-disable.png')
-    transform: translate(52rem, -10rem) scaleX(-1)
-  .button-prev.btn-tab.swiper-button-disabled
+    transform: translate(20rem, 13rem) scaleX(1)
+  .button-next.btn-tab.mobile.swiper-button-disabled
     background-image: url('./../../images/slider-icon/slider-nav-disable.png')
-    transform: translate(20rem, -10rem) scaleX(1)
+    transform: translate(50rem, 13rem) scaleX(-1)
   .modal-img
     width 50%
   .servises__description_mar
@@ -36,20 +44,25 @@
   .servises__tabs
     display none
   .mobile-slider
+    display none
+  .servises__tabs.planshet-tab
     display block
+    position relative
   .servise
     display flex
     align-items center
     flex-direction column
     margin-top 2rem
-    &__header
-      text-align center
   .header
-    &__contacts
-      flex-direction column
+    &__logo, &__phone-contact
+      margin 0
+      margin-bottom 2rem
     &__left-side, &__right-side
       width 100%
       justify-content space-around
+      flex-direction column
+    &__right-side
+      margin-top 1rem
     &__advantages
       flex-direction column
       margin-left 6rem
@@ -57,6 +70,20 @@
       display none
     &__heading, &__description, &__btn-wrap
       text-align center
+    &__stages
+      flex-direction column
+      align-items center
+      justify-content center
+    &__stages-wrap
+      margin-bottom 5rem
+      width 100%
+      justify-content space-around
+      &:nth-child(2)
+        margin 0
+    &__stage
+      margin 0
+
+
   .benefits
     &__heading-wrap
       flex-direction column
@@ -77,7 +104,12 @@
       margin-top 4rem
     &__tabs-navigation
       flex-direction column
+    &__tabs-navigation.planshet
+      display flex
+      flex-direction row
   .dangers
+    &__problems
+      justify-content space-around
     &__description_mar
       margin-left 0
       margin-top 2rem
@@ -88,22 +120,26 @@
     &__form-data
       flex-direction column
       justify-content center
-  .group
-    margin-right 0
-    margin-bottom 2.5rem
+
   .swiper-slide
     flex-direction column
     justify-content center
     align-items center
+  .works__content__room-desc
+    max-width: 57.6rem
   .sliderContent
     &__images-wrap
-      max-width 54.9rem
+      max-width 57.3rem
       margin auto
     &__small-img-container
+      flex-wrap wrap
+      justify-content flex-start
       margin 1.6rem auto 0
     &__icons
-      flex-direction: column
       align-items center
+    &__small-img
+      width 8.5rem
+      margin-right 1rem
   .works__content__desc
     margin: 2rem auto 0
   .stars
@@ -121,6 +157,10 @@
       display none
     &__man
       display none
+  .hidden_man
+    display flex
+    align-items center
+    justify-content space-around
   .certificate-block
     flex-direction column
     &__elem
@@ -130,27 +170,12 @@
       display flex
       justify-content space-around
       width 100%
-  .tab_btn
-    &.active
-      color ligc
-      &:before
-        width 26.2em
-      .tab_btn-icon
-        &-1
-          background-image url('./../../images/tabs_icons/1.png')
-        &-2
-          background-image url('./../../images/tabs_icons/2.png')
-        &-3
-          background-image url('./../../images/tabs_icons/3.png')
-        &-4
-          background-image url('./../../images/tabs_icons/4.png')
-  .tab_btn.active5:before
-    content ''
-    left -3.5rem
-
-
   .button-next, .button-prev
-    display none
+    left 0
+  .button-next
+    transform: translateX(71rem)
+  .button-next.swiper-button-disabled
+    transform: translateX(71rem) scaleX(-1)
   .thanks
     padding 0
   .wrapper.thanks__wrapper
@@ -165,8 +190,100 @@
     margin-top 2rem
   .header__heading.thanks__heading
     font-size: 4.5rem
+  .group
+    margin-right 0
+    margin-bottom 2.5rem
+  .tab_btn.active:before
+    left: -2rem;
+    width: 14.2rem;
 
+  .tab_btn.planshet-tab.active5:before
+    content ''
+    left 0rem
+    width: 19.2rem;
+  .button-next.btn-tab.planshet-btn, .button-prev.btn-tab.planshet-btn
+    left 0
+  .button-next.btn-tab.planshet-btn
+    transform: translate(59rem,10rem)
+  .button-prev.btn-tab.planshet-btn
+    transform: translate(10rem, 10rem) scaleX(-1)
+  .button-prev.btn-tab.planshet-btn.swiper-button-disabled
+    background-image: url('./../../images/slider-icon/slider-nav-disable.png')
+    transform: translate(10rem, 10rem) scaleX(1)
+  .button-next.btn-tab.planshet-btn.swiper-button-disabled
+    background-image: url('./../../images/slider-icon/slider-nav-disable.png')
+    transform: translate(59rem,10rem) scaleX(-1)
+  .servises__tabs-content
+    overflow hidden
+    height 51.7rem
+  .certificates__heading-wrap
+    display none
 @media only screen and (max-width: 576px)
+  .certificates__heading-wrap
+    display none
+  .hidden_man
+    flex-direction column
+  .certificates__man-new
+    margin-bottom 2rem
+  .button-next, .button-prev
+    left 0
+  .button-next
+    transform: translateX(26rem)
+  .button-next.swiper-button-disabled
+    transform: translateX(26rem) scaleX(-1)
+  .tab_btn
+    &.active
+      color ligc
+      &:before
+        width 19.2rem
+      .tab_btn-icon
+        &-1
+          background-image url('./../../images/tabs_icons/1.png')
+        &-2
+          background-image url('./../../images/tabs_icons/2.png')
+        &-3
+          background-image url('./../../images/tabs_icons/3.png')
+        &-4
+          background-image url('./../../images/tabs_icons/4.png')
+  .tab_btn.active5:before
+    content ''
+    left 0
+  .servises__tabs.planshet-tab
+    display none
+  .button-next.btn-tab, .button-prev.btn-tab
+    background: url('./../../images/slider-icon/slider-nav-active.png') no-repeat
+    display block
+    left 0
+    right 0
+    z-index 10
+  .button-next.btn-tab
+    transform: translate(52rem, -10rem)
+  .button-prev.btn-tab
+    transform:translate(20rem, -10rem) scale(-1)
+  .button-next.btn-tab.swiper-button-disabled
+    background-image: url('./../../images/slider-icon/slider-nav-disable.png')
+    transform: translate(52rem, -10rem) scaleX(-1)
+  .button-prev.btn-tab.swiper-button-disabled
+    background-image: url('./../../images/slider-icon/slider-nav-disable.png')
+    transform: translate(20rem, -10rem) scaleX(1)
+  .button-next.btn-tab.mobile
+    transform: translate(26rem, 13rem)
+  .button-prev.btn-tab.mobile
+    transform: translate(0rem, 13rem) scaleX(-1)
+  .button-prev.btn-tab.mobile.swiper-button-disabled
+    background-image: url('./../../images/slider-icon/slider-nav-disable.png')
+    transform: translate(0rem, 13rem) scaleX(1)
+  .button-next.btn-tab.mobile.swiper-button-disabled
+    background-image: url('./../../images/slider-icon/slider-nav-disable.png')
+    transform: translate(26rem, 13rem) scaleX(-1)
+  .group
+    margin-right 0
+    margin-bottom 2.5rem
+    width 100%
+    &__input
+      width 100%
+    &__span2
+      width 100%
   .plan
     &__steps
       flex-direction column
@@ -218,6 +335,9 @@
         margin-bottom 0
     &__stage-number
       left 20px
+    &__stages-wrap
+      flex-direction column
+      align-items center
   .works__content__room-name
     margin-top 2rem
   .works__content__room-desc
@@ -235,6 +355,7 @@
   .sliderContent__icons
     flex-wrap wrap
     justify-content center
+    flex-direction column
   .sliderContent__icon-elem
     flex-direction: column
     justify-content center
@@ -243,15 +364,18 @@
     width 32.9rem
   .sliderContent__small-img-container
     flex-wrap wrap
+    justify-content flex-start
   .sliderContent__small-img
     margin-bottom 1rem
+    margin-right 1rem
+    width: 8.6rem;
   .stars__star
     display flex
     flex-direction column
   .stars__star-descs
     margin-top 2rem
   .stars__star-img
-    width 17.2rem
+    width 20.2rem
     height 24rem
     margin-bottom 1rem
   .stars__star-descs-mar
@@ -259,8 +383,6 @@
   .header__heading
     font-size 4.8rem
     line-height: 5.2rem
-  .button-next, .button-prev
-    display none
   .dignitys__dignity
     margin-bottom 2rem
     &:last-child
@@ -289,7 +411,11 @@
   .footer__wrap
     flex-direction column
     align-items center
-
+  .header__contacts
+    flex-direction column
+  .hidden-content
+    margin 0
+    margin-bottom 2rem
 @media (max-width: 320px)
   .sliderContent__big-img
     width 29rem

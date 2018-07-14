@@ -6,13 +6,15 @@
     display flex
     align-items center
     position relative
-  &__name
+  &__name, &__name-new
     font-family "Roboto Condensed"
     font-size 2.4rem
     font-weight 300
     line-height 7.2rem
     text-transform uppercase
     margin-left 14.9rem
+  &__name-new
+    margin-left 0
   &__man
     position absolute
     right 2.9rem
@@ -20,7 +22,10 @@
     width 21.4rem
     height 31.4rem
     background url('./../../images/certificates/man.png') center center/cover
-
+  &__man-new
+    width 21.4rem
+    height 31.4rem
+    background url('./../../images/certificates/man.png') center center/cover
 .dignitys
   display flex
   justify-content space-between

@@ -2,10 +2,21 @@
 
 const qa = sel => [...document.querySelectorAll(sel)];
 
-qa('.tab_btn').forEach((tab, i) => tab.onclick = () => {
+if(document.body.offsetWidth > 768) {
+  qa('.tab_btn').forEach((tab, i) => tab.onclick = () => {
+    const dis = arr => arr.forEach(i => i.classList.remove('active'));
+    const add = el => el.classList.add('active')
+    dis(qa('.tab_btn')); dis(qa('.servises__type-of-servises')); add(tab); add(qa('.servises__type-of-servises')[i])
+  })
+}
+if(document.body.offsetWidth < 769) {
+  document.querySelector('.hidden-content').appendChild(document.querySelector('.header__advantages'))
+}
+
+qa('.tab_btn.planshet-tab').forEach((tab, i) => tab.onclick = () => {
   const dis = arr => arr.forEach(i => i.classList.remove('active'));
   const add = el => el.classList.add('active')
-  dis(qa('.tab_btn')); dis(qa('.servises__type-of-servises')); add(tab); add(qa('.servises__type-of-servises')[i])
+  dis(qa('.tab_btn.planshet-tab')); dis(qa('.servises__type-of-servises.planshet-content')); add(tab); add(qa('.servises__type-of-servises.planshet-content')[i])
 })
 
 // slider-images
@@ -87,9 +98,32 @@ selectOptions.forEach((option, i) => option.onclick = e => {
 
 const formBtns = document.querySelector('.servises__tabs-content');
 const formBtns1 = document.querySelector('.mobile-slider');
+const formBtns2 = document.querySelector('.servises__tabs.planshet-tab');
+const plans = [...document.querySelectorAll('.servises__type-of-servises.planshet-content')];
 const tabMenu = [...document.querySelectorAll('.servises__type-of-servises')];
 const mobileTab = [...document.querySelectorAll('.mobile-slider .swiper-wrapper[data-tab]')];
 
+formBtns2.addEventListener('click', e => {
+  if(e.target.classList.contains('servise__link')) {
+    const activeTabMenu = plans.filter(el => el.classList.contains('active'));
+    if(activeTabMenu[0].getAttribute('data-tab') == 1) {
+      selectLabel[1].textContent = 'Монтаж';
+      selectLabel[1].nextElementSibling.value ='Монтаж';
+    }
+    if(activeTabMenu[0].getAttribute('data-tab') == 2) {
+      selectLabel[1].textContent = 'Замена';
+      selectLabel[1].nextElementSibling.value ='Замена';
+    }
+    if(activeTabMenu[0].getAttribute('data-tab') == 3) {
+      selectLabel[1].textContent = 'Ремонт'
+      selectLabel[1].nextElementSibling.value ='Ремонт';
+    }
+    if(activeTabMenu[0].getAttribute('data-tab') == 4) {
+      selectLabel[1].textContent = 'Обслуживание'
+      selectLabel[1].nextElementSibling.value ='Обслуживание';
+    }
+  }
+})
 
 formBtns.addEventListener('click', e => {
   if(e.target.classList.contains('servise__link')) {
