@@ -1,7 +1,8 @@
-include ../mixins/_button
+include ../mixins/_formbutton
 .modal.modal-works
   form.form-works
-    h4.form__header Заполните форму <br /> чтобы расчитать <br /> стоимость
+    .modalCloseBtn
+    h4.form__header Заполните форму чтобы расчитать стоимость
     input(name='area' placeholder='Площадь помещения (кв.м)').form__input
     .form-works__select(tabindex="1")
       .form-works__select-label Выберете тип помещения
@@ -19,9 +20,9 @@ include ../mixins/_button
         .form-works__select-value Замена
         .form-works__select-value Ремонт
         .form-works__select-value Обслуживание
-    input(name='phone' placeholder='Телефон для уточнения деталей' required).form__input
-    +button('Расчитать стоимость', 'button button_fix-fns', 'button-wrap button-wrap_fix-pad1')
-    .confidentiality
+    input(name='phone' placeholder='Телефон для уточнения деталей' required).form__input.form__input-mar.fix-letter
+    +button('Расчитать стоимость', 'buttonFormWrap', 'buttonForm')
+    .confidentiality.confidentiality-mar
       input(type='checkbox' name='checkbox' checked).checkbox
-      span.confidentiality__span Согласен <a href='./../../vendor/lol.txt' class='confidentiality__link' download>с политикой конфиденциальности </span></a>
+      span.confidentiality__span Согласен <a href='./../../vendor/politic.docx' class='confidentiality__link' download>с политикой конфиденциальности </span></a>
 

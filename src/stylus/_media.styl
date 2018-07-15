@@ -1,6 +1,6 @@
 @media (min-width 769px)
   .modal-img
-    width 30%
+    width 25%
   .mobile-slider
     display none
   .servises__tabs.planshet-tab
@@ -8,17 +8,21 @@
   .hidden_man
     display none
 @media only screen and (max-width 768px)
+  .swiper-slide.row
+    flex-direction row
+    align-items flex-start
+  .header__stage-fix
+    margin 0
   .dignitys__dignity
     margin-bottom 2rem
   .plan
     &__steps
-      justify-content space-around
+      justify-content center
     &__step
-      width 50%
+      width 35%
+      margin-bottom 1rem
       &-arrow-pos1, &-arrow-pos2, &-arrow-pos3, &-arrow-pos4, &-arrow-pos5
         right -1.8rem
-      &-arrow-pos2, &-arrow-pos4
-        right 3.2rem
   .button-next.btn-tab, .button-prev.btn-tab
       background: url('./../../images/slider-icon/slider-nav-active.png') no-repeat
       display block
@@ -26,17 +30,27 @@
       right 0
       z-index 10
   .button-next.btn-tab.mobile
+    background: url('./../../images/slider-icon/slider-nav-active.png') no-repeat center center/cover
+    width 1.7rem
+    height 3.1rem
     transform: translate(50rem, 13rem)
     left 0
   .button-prev.btn-tab.mobile
+    background: url('./../../images/slider-icon/slider-nav-active.png') no-repeat center center/cover
+    width 1.7rem
+    height 3.1rem
     transform: translate(20rem, 13rem) scaleX(-1)
     left 0
   .button-prev.btn-tab.mobile.swiper-button-disabled
-    background-image: url('./../../images/slider-icon/slider-nav-disable.png')
+    background-image: url('./../../images/slider-icon/slider-nav-disable.png') no-repeat center center/cover
     transform: translate(20rem, 13rem) scaleX(1)
+    width 1.7rem
+    height 3.1rem
   .button-next.btn-tab.mobile.swiper-button-disabled
-    background-image: url('./../../images/slider-icon/slider-nav-disable.png')
+    background-image: url('./../../images/slider-icon/slider-nav-disable.png') no-repeat center center/cover
     transform: translate(50rem, 13rem) scaleX(-1)
+    width 1.7rem
+    height 3.1rem
   .modal-img
     width 50%
   .servises__description_mar
@@ -50,9 +64,9 @@
     position relative
   .servise
     display flex
-    align-items center
     flex-direction column
     margin-top 2rem
+    margin-left 6rem
   .header
     &__logo, &__phone-contact
       margin 0
@@ -96,9 +110,7 @@
     padding-bottom 0
     &__tabs
       margin-top 4rem
-    &__tabs-navigation
-      &:after
-        display none
+
     &__description_mar
       margin-left 0
       margin-top 4rem
@@ -161,6 +173,7 @@
     display flex
     align-items center
     justify-content space-around
+    flex-direction column
   .certificate-block
     flex-direction column
     &__elem
@@ -170,6 +183,10 @@
       display flex
       justify-content space-around
       width 100%
+  .danger__img
+    width 100%
+  .stars__star-img-size
+    margin-left -3.4rem
   .button-next, .button-prev
     left 0
   .button-next
@@ -204,21 +221,32 @@
   .button-next.btn-tab.planshet-btn, .button-prev.btn-tab.planshet-btn
     left 0
   .button-next.btn-tab.planshet-btn
-    transform: translate(59rem,10rem)
+    transform: translate(67rem,10rem)
   .button-prev.btn-tab.planshet-btn
-    transform: translate(10rem, 10rem) scaleX(-1)
+    transform: translate(2rem, 10rem) scaleX(-1)
   .button-prev.btn-tab.planshet-btn.swiper-button-disabled
     background-image: url('./../../images/slider-icon/slider-nav-disable.png')
-    transform: translate(10rem, 10rem) scaleX(1)
+    transform: translate(2rem, 10rem) scaleX(1)
   .button-next.btn-tab.planshet-btn.swiper-button-disabled
     background-image: url('./../../images/slider-icon/slider-nav-disable.png')
-    transform: translate(59rem,10rem) scaleX(-1)
+    transform: translate(67rem,10rem) scaleX(-1)
   .servises__tabs-content
     overflow hidden
     height 51.7rem
   .certificates__heading-wrap
     display none
 @media only screen and (max-width: 576px)
+  .servises__tabs-navigation
+    &:after
+      display none
+  .header__stage-fix
+    margin 0
+  .fix-center-element
+    margin-left -2.5rem
+  .danger__img
+    width 100%
+  .tab_btn.active:before
+    left -4rem
   .certificates__heading-wrap
     display none
   .hidden_man
@@ -331,8 +359,6 @@
       margin-bottom 4rem
       display flex
       align-items center
-      &:last-child
-        margin-bottom 0
     &__stage-number
       left 20px
     &__stages-wrap
@@ -416,6 +442,73 @@
   .hidden-content
     margin 0
     margin-bottom 2rem
+
+@media (max-width: 414px)
+  .sliderContent__big-img
+    width 37.9rem
+  .button-next
+    transform: translateX(35rem)
+  .button-next.swiper-button-disabled
+    transform: translateX(35rem) scaleX(-1)
+  .button-next.btn-tab
+    transform: translate(35rem,-10rem)
+  .button-next.btn-tab.swiper-button-disabled
+    transform: translate(35rem,-10rem) scaleX(-1)
+  .button-next.btn-tab.mobile
+    transform: translate(35rem, 13rem)
+  .button-next.btn-tab.mobile.swiper-button-disabled
+    transform: translate(35rem, 13rem) scaleX(-1)
+
+@media (max-width: 411px)
+  .sliderContent__big-img
+    width 37.9rem
+  .button-next
+    transform: translateX(36rem)
+  .button-next.swiper-button-disabled
+    transform: translateX(36rem) scaleX(-1)
+  .button-next.btn-tab
+    transform: translate(35rem,-10rem)
+  .button-next.btn-tab.swiper-button-disabled
+    transform: translate(35rem,-10rem) scaleX(-1)
+  .button-next.btn-tab.mobile
+    transform: translate(35rem, 13rem)
+  .button-next.btn-tab.mobile.swiper-button-disabled
+    transform: translate(35rem, 13rem) scaleX(-1)
+
+@media (max-width: 375px)
+  .sliderContent__big-img
+    width 34.5rem
+  .button-next
+    transform: translateX(32rem)
+  .button-next.swiper-button-disabled
+    transform: translateX(32rem) scaleX(-1)
+  .button-next.btn-tab
+    transform: translate(31rem,-10rem)
+  .button-next.btn-tab.swiper-button-disabled
+    transform: translate(31rem,-10rem) scaleX(-1)
+  .button-next.btn-tab.mobile
+    transform: translate(31rem, 13rem)
+  .button-next.btn-tab.mobile.swiper-button-disabled
+    transform: translate(31rem, 13rem) scaleX(-1)
+
+
 @media (max-width: 320px)
+  .servise
+    display flex
+    flex-direction column
+    margin-top 4rem
+    margin-left 0
   .sliderContent__big-img
     width 29rem
+  .button-next
+    transform: translateX(26rem)
+  .button-next.swiper-button-disabled
+    transform: translateX(26rem) scaleX(-1)
+  .button-next.btn-tab
+    transform: translate(26rem,-10rem)
+  .button-next.btn-tab.swiper-button-disabled
+    transform: translate(26rem,-10rem) scaleX(-1)
+  .button-next.btn-tab.mobile
+    transform: translate(26rem, 13rem)
+  .button-next.btn-tab.mobile.swiper-button-disabled
+    transform: translate(26rem, 13rem) scaleX(-1)

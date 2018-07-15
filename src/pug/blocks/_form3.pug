@@ -1,10 +1,11 @@
-include ../mixins/_button
+include ../mixins/_formbutton
 .modal.modal-specialist
   form.form-specialist
-    h4.form__header Заполните форму, <br /> чтобы вызвать <br /> специалиста-сметчика
+    .modalCloseBtn
+    h4.form__header Заполните форму, <br /> чтобы вызвать специалиста-сметчика
     input(name='name' placeholder='Введите имя (не обязательно)').form__input
-    input(name='phone' placeholder='Телефон или Email (для ответа)' required).form__input
-    +button('Вызвать специалиста', 'button button_fix-width button_fix-fns2', 'button-wrap button-wrap_fix-width1')
-    .confidentiality
+    input(name='phone' placeholder='Телефон или Email (для ответа)' required).form__input.form__input-mar
+    +button('Вызвать специалиста', 'buttonFormWrap', 'buttonForm')
+    .confidentiality.confidentiality-mar
       input(type='checkbox' name='checkbox' checked).checkbox
-      span.confidentiality__span Согласен <a href='./../../vendor/lol.txt' class='confidentiality__link' download>с политикой конфиденциальности </span></a>
+      span.confidentiality__span Согласен <a href='./../../vendor/politic.docx' class='confidentiality__link' download>с политикой конфиденциальности </span></a>

@@ -1,29 +1,9 @@
-.form-modal1, .form-modal2, .form-modal3, .form-modal4
-  display none
-  justify-content center
-  align-items center
-  position fixed
-  top 0
-  left 0
-  width 100%
-  height 100vh
-  margin auto
-  background-color rgba(0,0,0,.5)
-  opacity 0
-  transition opacity .4s
-  will-change opacity
-  z-index: 1
-
-.form-modal1.show, .form-modal2.show, .form-modal3.show, .form-modal4.show
-  opacity 1
-
 .form-callback, .form-specialist, .form-cons
   display flex
   flex-direction column
   max-width 37.4rem
   border 0.7rem solid #239cc8
-  padding 4.2rem 4.5rem 3.8rem 5.5rem
-  padding 2.4rem
+  padding 3.5rem 3.8rem 3.1rem 4.8rem
   border-radius .5rem
   position: relative
   background-color #fff
@@ -32,15 +12,14 @@
   flex-direction column
   max-width 37.4rem
   border 0.7rem solid #239cc8
-  padding 4.2rem 4.5rem 3.8rem 5.5rem
-  padding 2.4rem
+  padding 3.5rem 3.8rem 3.1rem 4.8rem
   border-radius .5rem
   position: relative
   background-color #fff
   &__select-label
-    font-size: 1.4rem
     border 0.1rem solid rgba(35, 156, 200, 0.22)
     padding 2.1rem 0 1.7rem 2.2rem
+    font-size 1.6rem
     background-color #f7f7f7
     max-width 27.9rem
     position relative
@@ -48,7 +27,7 @@
     &:before
       content: '▼'
       position absolute
-      right 2.1rem
+      right 1rem
       top 50%
       transform: translate(-50%, -50%)
   &__select
@@ -71,7 +50,7 @@
   &__select-value
     border 0.1rem solid rgba(35, 156, 200, 0.22)
     padding 1.7rem 0 1.5rem 2.2rem
-    font-size: 1.4rem
+    font-size 1.6rem
     background-color #fff
     position relative
     &:hover
@@ -79,30 +58,62 @@
       &:before
         content: ''
         position absolute
-        right 2.1rem
-        top 50%
+        right 1rem
+        top 2.4rem
         transform: translate(-50%, -50%)
         width 1.9rem
         height 1.5rem
         background url('./../../images/checked.png') center center/cover
 
-
-
 .form__header
-  font-size 2.4rem
+  max-width 25.4rem
+  color #239cc8
+  font-family "Myriad Pro"
+  font-size 2.1rem
   font-weight 400
   line-height 2.6rem
-  color #239cc8
-  margin-bottom 1.9rem
   text-align center
+  margin-bottom 3rem
 
 .form__input
   margin-bottom 1rem
-  padding 2.1rem 0 1.7rem 2.2rem
-  font-size 1.4rem
-  width 27.9rem
+  padding 2.1rem 0 1.7rem 2rem
+  font-size 1.6rem
   border none
+  background-color #f7f7f7
   border 0.1rem solid rgba(35, 156, 200, 0.22)
   &-size
     height 18rem
     resize: none
+    padding 2.1rem 2.2rem 1.7rem 2rem
+  &-mar
+    margin-bottom 1.7rem
+
+.buttonFormWrap
+  width 28.3rem
+  height 8.3rem
+  border-radius 2.8rem
+  border 0.1rem solid #ffb2b5
+  padding 1rem 0.6rem 1rem 0.7rem
+  margin-left -0.9rem
+
+.buttonForm
+  border: none
+  width 27rem
+  height 6.3rem
+  box-shadow 0 0.5rem 1rem rgba(227, 69, 74, 0.35)
+  border-radius 2.8rem
+  background-color #e31e25
+  color #ffffff
+  font-family "Myriad Pro"
+  font-size 1.8rem
+  font-weight 700
+  line-height 2.6rem
+  &:hover, &:active
+    background-color #ff222a
+
+input[placeholder]
+  color #909090
+
+.fix-letter
+  letter-spacing: -0.1rem

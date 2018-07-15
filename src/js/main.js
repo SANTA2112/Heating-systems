@@ -37,6 +37,8 @@ sliderContent.forEach(el => el.onmouseover = even => {
 const modalCert = document.querySelector('.modal.modal-cert');
 const modalImg = document.querySelector('.modal.modal-cert .modal-img');
 const padding = window.innerWidth - document.body.offsetWidth;
+
+
 const closeMod = modals => {
   modals.forEach(modal => modal.onclick = e => {
     if(e.target === e.currentTarget) {
@@ -50,6 +52,7 @@ const closeMod = modals => {
   })
 }
 closeMod(qa('.modal'))
+
 qa('.certificate-block__elem').forEach(el => el.onclick = e => {
   modalCert.style.display = 'flex';
   modalImg.setAttribute('src', e.target.getAttribute('data-src'))
@@ -95,7 +98,19 @@ selectOptions.forEach((option, i) => option.onclick = e => {
   input.value = e.target.textContent;
   select[i].dispatchEvent(new CustomEvent('change', {detail: { value: e.target.textContent }}))
 })
+// forms
 
+const CloseFormBnt = document.querySelectorAll('.modalCloseBtn');
+
+CloseFormBnt.forEach(el => el.onclick = e => {
+  const modal = e.target.parentElement.parentElement;
+  modal.classList.remove('show');
+    setTimeout(() => modal.style.display = '', 400);
+    setTimeout(() => {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = 0;
+    }, 300)
+})
 const formBtns = document.querySelector('.servises__tabs-content');
 const formBtns1 = document.querySelector('.mobile-slider');
 const formBtns2 = document.querySelector('.servises__tabs.planshet-tab');
@@ -182,6 +197,7 @@ const swiperWorks = new Swiper('.swiper-container', {
 
 [...document.querySelectorAll('form')].forEach(form => form.onsubmit = e => {
   e.preventDefault();
+  if (!e.target.checkbox.checked) return null;
   const body = new FormData(form);
   fetch('/mail.php', { body: body, method: 'POST' })
     .then(_ => {

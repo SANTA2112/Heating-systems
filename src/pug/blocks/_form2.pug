@@ -1,10 +1,11 @@
-include ../mixins/_button
+include ../mixins/_formbutton
 .modal.modal-callback
   form.form-callback
-    h4.form__header Заполните форму <br /> чтобы задать вопрос <br /> специалисту
+    .modalCloseBtn
+    h4.form__header Заполните форму, <br /> чтобы задать вопрос специалисту
     textarea(name='question' placeholder='Введите ваш вопрос').form__input.form__input-size
     input(name='phone' placeholder='Телефон или Email (для ответа)' required).form__input
-    +button('Задать вопрос', 'button button_fix-fns button_fix-width', 'button-wrap button-wrap_fix-pad1')
-    .confidentiality
+    +button('Задать вопрос', 'buttonFormWrap', 'buttonForm')
+    .confidentiality.confidentiality-mar
       input(type='checkbox' name='checkbox' checked).checkbox
-      span.confidentiality__span Согласен <a href='./../../vendor/lol.txt' class='confidentiality__link' download>с политикой конфиденциальности </span></a>
+      span.confidentiality__span Согласен <a href='./../../vendor/politic.docx' class='confidentiality__link' download>с политикой конфиденциальности </span></a>
