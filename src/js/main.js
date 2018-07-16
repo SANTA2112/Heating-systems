@@ -194,7 +194,7 @@ const swiperWorks = new Swiper('.swiper-container', {
   },
 });
 
-
+//sent
 [...document.querySelectorAll('form')].forEach(form => form.onsubmit = e => {
   e.preventDefault();
   if (!e.target.checkbox.checked) return null;
@@ -209,3 +209,10 @@ const swiperWorks = new Swiper('.swiper-container', {
 const allImages = [...document.querySelectorAll('img')].forEach(img => {
   img.setAttribute('src', img.dataset.src)
 })
+
+if(window.innerWidth > 310 && window.innerWidth < 768) {
+  const workDesc = document.querySelectorAll('.works__content__desc');
+  const sliderContent = document.querySelectorAll('.sliderContent');
+  workDesc.forEach(work => work.style.marginBottom = '20px');
+  sliderContent.forEach((slide, i) => slide.insertBefore(workDesc[i], slide.children[0]));
+}
